@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+span {
+    display: inline-block;
+}
+
+#cool-text {
+    margin-top: 20%;
+    color: white;
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.text-animation {
+    --delay: 0s;
+    animation: textAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.3,.26,.86,1.54);
+    animation-delay: calc(var(--delay) * 0.1s);
+    animation-fill-mode: backwards;
+}
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
